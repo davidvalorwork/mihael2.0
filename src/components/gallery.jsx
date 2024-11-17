@@ -1,4 +1,3 @@
-import { Image } from "./image";
 import React from "react";
 
 export const Gallery = (props) => {
@@ -20,11 +19,16 @@ export const Gallery = (props) => {
                     key={`${d.title}-${i}`}
                     className="col-sm-6 col-md-4 col-lg-4"
                   >
-                    <Image
-                      title={d.title}
-                      largeImage={d.largeImage}
-                      smallImage={d.smallImage}
-                    />
+                    {d.videoUrl ? (
+                      <div className="video-container">
+                        <video width="100%" controls>
+                          <source src={d.videoUrl} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    ) : (
+                      <div>No video available</div>
+                    )}
                   </div>
                 ))
               : "Loading..."}

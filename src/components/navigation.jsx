@@ -1,6 +1,10 @@
 import React from "react";
 
 export const Navigation = (props) => {
+  const brandStyle = {
+    fontSize: "14px", // Ajusta el tamaño según tus necesidades
+  };
+
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -17,8 +21,17 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
           </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
-            React Landing Page
+          <a
+            className="navbar-brand page-scroll"
+            href="#page-top"
+            style={brandStyle}
+          >
+            <img
+              src="img/logo.jpeg" // Reemplaza con la ruta a tu logo
+              alt="Logo"
+              style={{ height: "50px", marginRight: "100px" }} // Ajusta el tamaño y el margen según tus necesidades
+            />
+            Cristal Clear Water Tecnology
           </a>{" "}
         </div>
 
