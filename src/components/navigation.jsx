@@ -31,7 +31,7 @@ export const Navigation = (props) => {
               alt="Logo"
               style={{ height: "50px", marginRight: "100px" }} // Ajusta el tamaño y el margen según tus necesidades
             />
-            Cristal Clear Water Tecnology
+            Crystal Clear Water Tecnology
           </a>{" "}
         </div>
 
