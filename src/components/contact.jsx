@@ -20,10 +20,6 @@ export const Contact = (props) => {
     e.preventDefault();
     console.log(name, email, message);
 
-    {
-      /* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */
-    }
-
     emailjs
       .sendForm(
         "YOUR_SERVICE_ID",
@@ -48,7 +44,7 @@ export const Contact = (props) => {
           <div className="col-md-8">
             <div className="row">
               <div className="section-title">
-                <h2>Get In Touch</h2>
+                <h2>Get a free quoute</h2>
                 <p>
                   Please fill out the form below to send us an email and we will
                   get back to you as soon as possible.
@@ -106,7 +102,7 @@ export const Contact = (props) => {
           </div>
           <div className="col-md-3 col-md-offset-1 contact-info">
             <div className="contact-item">
-              <h3>Contact Info</h3>
+              <h3>Contact information</h3>
               <p>
                 <span>
                   <i className="fa fa-map-marker"></i> Address
@@ -133,7 +129,7 @@ export const Contact = (props) => {
           </div>
           <div className="col-md-12">
             <div className="row">
-              <div className="social">
+              {/* <div className="social">
                 <ul>
                   <li>
                     <a href={props.data ? props.data.facebook : "/"}>
@@ -151,7 +147,7 @@ export const Contact = (props) => {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

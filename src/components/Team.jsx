@@ -3,12 +3,14 @@ import React from "react";
 export const Team = (props) => {
   return (
     <div id="team" className="text-center">
-      <div className="container">
+      {/* <div className="container">
         <div className="col-md-8 col-md-offset-2 section-title">
-          <h2>Equipo de negocio</h2>
+          <h2>Business Team</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
+            Our business team is composed of highly skilled and experienced
+            professionals dedicated to providing exceptional service. We take
+            pride in our work and strive to exceed customer expectations in
+            every project we undertake.
           </p>
         </div>
         <div id="row">
@@ -27,7 +29,7 @@ export const Team = (props) => {
               ))
             : "loading"}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

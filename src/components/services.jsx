@@ -5,10 +5,13 @@ export const Services = (props) => {
     <div id="services" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Nuestros servicios</h2>
+          <h2>Our Services</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
+            We provide top-quality water filtration systems and professional
+            installation services. Our team is dedicated to ensuring that you
+            have access to clean, safe, and great-tasting water. With our
+            advanced technology and expert advice, we guarantee reliable and
+            efficient solutions tailored to your needs.
           </p>
         </div>
         <div className="row">

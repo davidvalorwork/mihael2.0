@@ -1,53 +1,38 @@
 {
   "Header": {
-    "title": "Bienvenido",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "Crystal Clear Water Tecnology LLC",
+    "paragraph": ""
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "We are dedicated to providing high-quality water filtration systems and professional installation services. Our mission is to ensure that you have access to clean, safe, and great-tasting water. With years of experience and a commitment to customer satisfaction, we strive to deliver the best products and services in the industry.",
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "High-quality water filtration",
+      "Professional installation",
+      "Experienced team",
+      "Customer satisfaction"
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "Advanced technology",
+      "Reliable and efficient",
+      "Expert advice",
+      "Exceptional service"
     ]
   },
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-tint",
+      "name": "Water Filtration Systems",
+      "text": "We provide high-quality water filtration systems that ensure you have access to clean, safe, and great-tasting water. Our systems are designed to remove impurities and improve the overall quality of your water."
     },
     {
-      "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-wrench",
+      "name": "Professional Installation",
+      "text": "Our team of experts offers professional installation services to ensure your water filtration system is set up correctly and efficiently. We take care of everything, so you can enjoy the benefits of clean water without any hassle."
     },
     {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-cogs",
+      "name": "Maintenance and Support",
+      "text": "We offer ongoing maintenance and support to keep your water filtration system running smoothly. Our team is always available to answer your questions and provide the assistance you need."
     }
   ],
   "Gallery": [
@@ -66,34 +51,34 @@
   ],
   "Testimonials": [
     {
-      "img": "https://royalarcadenorwich.co.uk/wp-content/uploads/2017/07/200x200.png",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "img": "img/1.jpg",
+      "text": "\"The water filter installation was quick and professional. Our water quality has improved significantly! Highly recommend their service.\"",
+      "name": "Emily Johnson"
     },
     {
       "img": "https://royalarcadenorwich.co.uk/wp-content/uploads/2017/07/200x200.png",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"Excellent service and top-notch products. The team was very knowledgeable and answered all our questions. We are very satisfied with our new water filter system.\"",
+      "name": "Michael Smith"
     },
     {
       "img": "https://royalarcadenorwich.co.uk/wp-content/uploads/2017/07/200x200.png",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Great experience from start to finish. The installation was seamless, and the water tastes so much better now. Thank you!\"",
+      "name": "Jessica Williams"
     },
     {
       "img": "https://royalarcadenorwich.co.uk/wp-content/uploads/2017/07/200x200.png",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"I am extremely happy with the water filter installation. The team was professional and efficient. I can already notice the difference in water quality.\"",
+      "name": "David Brown"
     },
     {
       "img": "https://royalarcadenorwich.co.uk/wp-content/uploads/2017/07/200x200.png",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Fantastic service! The installation was done quickly and without any hassle. Our water is now crystal clear and tastes great.\"",
+      "name": "Sarah Davis"
     },
     {
       "img": "https://royalarcadenorwich.co.uk/wp-content/uploads/2017/07/200x200.png",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"Highly recommend this company for water filter installation. The team was professional, and the product quality is excellent. Very satisfied with the results.\"",
+      "name": "James Wilson"
     }
   ],
   "Team": [
@@ -114,30 +99,30 @@
     }
   ],
   "Contact": {
-    "address": "Texas",
-    "phone": "+1 (281) 918-9126",
-    "email": "info@company.com"
+    "address": "10921 boudreaud Rd Tomball Houston Texas, 77375",
+    "phone": "+1 (346) 794-9398",
+    "email": "admcctec@gmail.com"
   },
   "Features": [
     {
       "icon": "fa fa-comments-o",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Quality Water Filtration",
+      "text": "We specialize in providing top-quality water filtration systems and professional installation services. Our team is dedicated to ensuring that you have access to clean, safe, and great-tasting water. With years of experience and a commitment to customer satisfaction, we guarantee the best service and products in the industry."
     },
     {
       "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Expert Advice",
+      "text": "Our team provides expert advice on the best water filtration systems for your needs. We are here to help you make informed decisions and ensure you get the most out of your investment."
     },
     {
       "icon": "fa fa-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Professional Team",
+      "text": "Our professional team is highly trained and experienced in water filter installation. We take pride in our work and strive to deliver exceptional service to every customer."
     },
     {
       "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Advanced Technology",
+      "text": "We use the latest technology in water filtration to ensure you receive the highest quality water. Our systems are designed to be efficient, reliable, and easy to maintain."
     }
   ]
 }

@@ -5,6 +5,12 @@ export const Navigation = (props) => {
     fontSize: "14px", // Ajusta el tamaño según tus necesidades
   };
 
+  const logoStyle = {
+    height: "110px", // Ajusta el tamaño según tus necesidades
+    maxHeight: "100442px", // Asegura que el logo no se salga del navbar
+    marginRight: "220px", // Ajusta el margen según tus necesidades
+  };
+
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -29,9 +35,8 @@ export const Navigation = (props) => {
             <img
               src="img/logo.jpeg" // Reemplaza con la ruta a tu logo
               alt="Logo"
-              style={{ height: "50px", marginRight: "100px" }} // Ajusta el tamaño y el margen según tus necesidades
+              style={logoStyle} // Aplica el estilo del logo
             />
-            Crystal Clear Water Tecnology
           </a>{" "}
         </div>
 
@@ -57,7 +62,7 @@ export const Navigation = (props) => {
             </li>
             <li>
               <a href="#portfolio" className="page-scroll">
-                Gallery
+                Our Products
               </a>
             </li>
             <li>
@@ -65,11 +70,11 @@ export const Navigation = (props) => {
                 Testimonials
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#team" className="page-scroll">
                 Team
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="#contact" className="page-scroll">
                 Contact
