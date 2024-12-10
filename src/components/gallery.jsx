@@ -1,39 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
+import "../styles/products/Gallery.css";
 
 export const Gallery = (props) => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
     <div id="portfolio" className="text-center">
       <div className="container">
         <div className="section-title">
-          {/* <h2>Gallery</h2> */}
-          {/* <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
-          </p> */}
+          <h2>Our Products</h2>
         </div>
-        {/* <div className="row">
-          <div className="portfolio-items">
-            {props.data
-              ? props.data.map((d, i) => (
+        <div className="accordion">
+          {props.data
+            ? props.data.map((d, i) => (
+                <div key={`${d.title}-${i}`} className="accordion-item">
                   <div
-                    key={`${d.title}-${i}`}
-                    className="col-sm-6 col-md-4 col-lg-4"
+                    className="accordion-title"
+                    onClick={() => toggleAccordion(i)}
                   >
-                    {d.videoUrl ? (
-                      <div className="video-container">
-                        <video width="100%" controls>
-                          <source src={d.videoUrl} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                    ) : (
-                      <div>No video available</div>
-                    )}
+                    <h3>{d.title}</h3>
+                    <span>{activeIndex === i ? "-" : "+"}</span>
                   </div>
-                ))
-              : "Loading..."}
-          </div>
-        </div> */}
+                  <div
+                    className={`accordion-content ${
+                      activeIndex === i ? "active" : ""
+                    }`}
+                  >
+                    <div className="product-item">
+                      <div className="img-container">
+                        <img
+                          src={d.imgUrl}
+                          alt={d.title}
+                          width="400"
+                          height="200"
+                        />
+                      </div>
+                      <p>{d.description}</p>
+                      <ul>
+                        {d.features.map((feature, index) => (
+                          <li key={index}>{feature}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))
+            : "Loading..."}
+        </div>
       </div>
     </div>
   );

@@ -35,48 +35,90 @@
       "text": "We offer ongoing maintenance and support to keep your water filtration system running smoothly. Our team is always available to answer your questions and provide the assistance you need."
     }
   ],
+
   "Gallery": [
     {
-      "title": "Video Title 1",
-      "videoUrl": "videos/1.mp4"
+      "title": "CrystalClear Tank Shroud",
+      "imgUrl": "img/products/HydroBlue-Tank-Shroud.png",
+      "description": "The CrystalClear Tank Shroud is designed to provide superior protection and insulation for your water tank. Available in multiple sizes to fit various tank dimensions.",
+      "features": [
+        "Tank Shroud",
+        "HYDROBLUE-TS-M",
+        "HYDROBLUE-TS-L",
+        "HYDROBLUE-TS-XL"
+      ]
     },
     {
-      "title": "Video Title 2",
-      "videoUrl": "videos/2.mp4"
+      "title": "CrystalClear Plain",
+      "imgUrl": "img/products/HydroBlue-Plain.png",
+      "description": "",
+      "features": [
+        "Plain",
+        "HYDROBLUE-R",
+        "HYDROBLUE-M",
+        "HYDROBLUE-L",
+        "HYDROBLUE-XL"
+      ]
     },
     {
-      "title": "Video Title 2",
-      "videoUrl": "videos/3.mp4"
+      "title": "CrystalClear Spring",
+      "imgUrl": "img/products/HydroSpring-2023.png",
+      "description": "The CrystalClear Spring is a state-of-the-art water treatment system designed to provide superior water quality and efficiency. It features advanced technology and multiple modes of operation to ensure optimal performance and convenience.",
+      "features": [
+        "Solid state microprocessor with easy access front panel settings",
+        "Three modes of operation; meter immediate, meter delayed, or time clock delayed",
+        "Double backwash feature offers optimum regeneration, cleaning ability, and efficiency",
+        "36 selectable pre-programmed regeneration cycles",
+        "Days override feature; 1 – 28 days available",
+        "Backwash and brining ability to 22\" diameter tanks",
+        "Down-flow/up-flow regeneration",
+        "Stores system configuration and operation data in nonvolatile memory",
+        "Coin Cell Lithium battery back-up with an 8 hour carry over",
+        "12-volt output AC Adapter provides safe and easy installation",
+        "Control valve design provides optimum service and backwash rates",
+        "Treated water regenerant refill",
+        "Reliable and proven DC drive"
+      ],
+      "advantages": [
+        "Softer Smoother Skin and Hair",
+        "Cleaner Longer Lasting Clothes",
+        "Cleaner Dishes, Spotless Silverware",
+        "Saves Over 75% on Soaps and Cleaning Supplies",
+        "Easily Clean Plumbing Fixtures and Shower Parts",
+        "Protect Water Using Appliances",
+        "Saves Energy"
+      ]
     }
   ],
+
   "Testimonials": [
     {
-      "img": "img/1.jpg",
+      "img": "img/testimonials/04.jpg",
       "text": "\"The water filter installation was quick and professional. Our water quality has improved significantly! Highly recommend their service.\"",
       "name": "Emily Johnson"
     },
     {
-      "img": "https://royalarcadenorwich.co.uk/wp-content/uploads/2017/07/200x200.png",
+      "img": "img/testimonials/03.jpg",
       "text": "\"Excellent service and top-notch products. The team was very knowledgeable and answered all our questions. We are very satisfied with our new water filter system.\"",
       "name": "Michael Smith"
     },
     {
-      "img": "https://royalarcadenorwich.co.uk/wp-content/uploads/2017/07/200x200.png",
+      "img": "img/testimonials/1.jpeg",
       "text": "\"Great experience from start to finish. The installation was seamless, and the water tastes so much better now. Thank you!\"",
       "name": "Jessica Williams"
     },
     {
-      "img": "https://royalarcadenorwich.co.uk/wp-content/uploads/2017/07/200x200.png",
+      "img": "img/testimonials/ja.png",
       "text": "\"I am extremely happy with the water filter installation. The team was professional and efficient. I can already notice the difference in water quality.\"",
       "name": "David Brown"
     },
     {
-      "img": "https://royalarcadenorwich.co.uk/wp-content/uploads/2017/07/200x200.png",
+      "img": "img/testimonials/06.jpg",
       "text": "\"Fantastic service! The installation was done quickly and without any hassle. Our water is now crystal clear and tastes great.\"",
       "name": "Sarah Davis"
     },
     {
-      "img": "https://royalarcadenorwich.co.uk/wp-content/uploads/2017/07/200x200.png",
+      "img": "img/testimonials/05.jpg",
       "text": "\"Highly recommend this company for water filter installation. The team was professional, and the product quality is excellent. Very satisfied with the results.\"",
       "name": "James Wilson"
     }

@@ -1,0 +1,28 @@
+.accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.accordion-title {
+  background-color: #f7f7f7;
+  cursor: pointer;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+}
+
+.accordion-content.active {
+  display: block;
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
