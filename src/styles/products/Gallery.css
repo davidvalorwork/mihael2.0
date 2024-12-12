@@ -21,8 +21,22 @@
   display: block;
 }
 
+.product-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.img-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.text-container {
+  flex: 2;
+}
+
 .img-container img {
-  max-width: 100%;
+  max-width: 50%; /* Reduce the width to half */
   height: auto;
   object-fit: contain;
 }

@@ -39,12 +39,14 @@ export const Gallery = (props) => {
                           height="200"
                         />
                       </div>
-                      <p>{d.description}</p>
-                      <ul>
-                        {d.features.map((feature, index) => (
-                          <li key={index}>{feature}</li>
-                        ))}
-                      </ul>
+                      <div className="text-container">
+                        <p>{d.description}</p>
+                        <ul>
+                          {d.features.map((feature, index) => (
+                            <li key={index}>{feature}</li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
