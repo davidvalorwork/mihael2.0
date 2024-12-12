@@ -32,12 +32,26 @@ export const Gallery = (props) => {
                   >
                     <div className="product-item">
                       <div className="img-container">
-                        <img
-                          src={d.imgUrl}
-                          alt={d.title}
-                          width="400"
-                          height="200"
-                        />
+                        {d.imgUrls
+                          ? d.imgUrls.map((url, index) => (
+                              <div key={index} className="row">
+                                <img
+                                  src={url}
+                                  alt={`${d.title} ${index + 1}`}
+                                  width="400"
+                                  height="200"
+                                />
+                                {d.texts && <p>{d.texts[index]}</p>}
+                              </div>
+                            ))
+                          : d.imgUrl && (
+                              <img
+                                src={d.imgUrl}
+                                alt={d.title}
+                                width="400"
+                                height="200"
+                              />
+                            )}
                       </div>
                       <div className="text-container">
                         <p>{d.description}</p>
