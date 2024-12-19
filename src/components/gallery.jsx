@@ -17,7 +17,12 @@ export const Gallery = (props) => {
         <div className="accordion">
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.title}-${i}`} className="accordion-item">
+                <div
+                  key={`${d.title}-${i}`}
+                  className={`accordion-item ${
+                    d.title === "Reverse Osmosis" ? "reverse-osmosis" : ""
+                  }`}
+                >
                   <div
                     className="accordion-title"
                     onClick={() => toggleAccordion(i)}
@@ -30,31 +35,63 @@ export const Gallery = (props) => {
                       activeIndex === i ? "active" : ""
                     }`}
                   >
-                    <div className="product-item">
-                      <div className="img-container">
-                        {d.imgUrls
-                          ? d.imgUrls.map((url, index) => (
-                              <div key={index} className="row">
+                    <div
+                      className={`product-item ${
+                        d.title === "Reverse Osmosis" ? "reverse-osmosis" : ""
+                      }`}
+                    >
+                      {d.title !== "Reverse Osmosis" && (
+                        <div className="img-container">
+                          {d.imgUrls
+                            ? d.imgUrls.map((url, index) => (
+                                <div key={index} className="row">
+                                  <img
+                                    src={url}
+                                    alt={`${d.title} ${index + 1}`}
+                                    width="400"
+                                    height="200"
+                                  />
+                                  {d.texts && <p>{d.texts[index]}</p>}
+                                </div>
+                              ))
+                            : d.imgUrl && (
                                 <img
-                                  src={url}
-                                  alt={`${d.title} ${index + 1}`}
+                                  src={d.imgUrl}
+                                  alt={d.title}
                                   width="400"
                                   height="200"
                                 />
-                                {d.texts && <p>{d.texts[index]}</p>}
-                              </div>
-                            ))
-                          : d.imgUrl && (
-                              <img
-                                src={d.imgUrl}
-                                alt={d.title}
-                                width="400"
-                                height="200"
-                              />
-                            )}
-                      </div>
+                              )}
+                        </div>
+                      )}
                       <div className="text-container">
                         <p>{d.description}</p>
+                      </div>
+                      {d.title === "Reverse Osmosis" && (
+                        <div className="img-container">
+                          {d.imgUrls
+                            ? d.imgUrls.map((url, index) => (
+                                <div key={index} className="row">
+                                  <img
+                                    src={url}
+                                    alt={`${d.title} ${index + 1}`}
+                                    width="400"
+                                    height="200"
+                                  />
+                                  {d.texts && <p>{d.texts[index]}</p>}
+                                </div>
+                              ))
+                            : d.imgUrl && (
+                                <img
+                                  src={d.imgUrl}
+                                  alt={d.title}
+                                  width="400"
+                                  height="200"
+                                />
+                              )}
+                        </div>
+                      )}
+                      <div className="text-container">
                         <ul>
                           {d.features.map((feature, index) => (
                             <li key={index}>{feature}</li>

@@ -40,3 +40,27 @@
   height: auto;
   object-fit: contain;
 }
+
+/* Specific styles for Reverse Osmosis items */
+.reverse-osmosis .product-item {
+  flex-direction: column;
+  align-items: center;
+}
+
+.reverse-osmosis .img-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 0; /* Remove margin for reverse osmosis */
+}
+
+.reverse-osmosis .img-container .row {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.reverse-osmosis .text-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
