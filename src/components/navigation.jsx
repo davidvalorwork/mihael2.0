@@ -6,9 +6,9 @@ export const Navigation = (props) => {
   };
 
   const logoStyle = {
-    height: "110px", // Ajusta el tamaño según tus necesidades
-    maxHeight: "100442px", // Asegura que el logo no se salga del navbar
-    marginRight: "220px", // Ajusta el margen según tus necesidades
+    height: "50px", // Ajusta el tamaño según tus necesidades
+    maxHeight: "50px", // Asegura que el logo no se salga del navbar
+    marginRight: "20px", // Ajusta el margen según tus necesidades
   };
 
   return (
