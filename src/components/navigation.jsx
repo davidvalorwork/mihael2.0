@@ -3,12 +3,11 @@ import React from "react";
 export const Navigation = (props) => {
   const brandStyle = {
     fontSize: "14px", // Ajusta el tamaño según tus necesidades
+    padding: "0px"
   };
 
   const logoStyle = {
-    height: "50px", // Ajusta el tamaño según tus necesidades
-    maxHeight: "50px", // Asegura que el logo no se salga del navbar
-    marginRight: "20px", // Ajusta el margen según tus necesidades
+    height: "60px", // Ajusta el tamaño según tus necesidades
   };
 
   return (
@@ -28,7 +27,7 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a
-            className="navbar-brand page-scroll"
+            className="navbar-brand page-scroll flex"
             href="#page-top"
             style={brandStyle}
           >
@@ -37,7 +36,15 @@ export const Navigation = (props) => {
               alt="Logo"
               style={logoStyle} // Aplica el estilo del logo
             />
-          </a>{" "}
+
+          </a>{ }
+          <a  href="#page-top">
+            <img
+              src="img/onlyText.png"
+              style={{ width: "160px", marginTop: "13px", marginLeft: "-10px"}}
+            />
+          </a>
+
         </div>
 
         <div
