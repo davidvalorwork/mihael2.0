@@ -67,10 +67,7 @@ export const OrderForm = () => {
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
             placeholder="(123) 456-7890" 
             required 
-            pattern="\(\d{3}\) \d{3}-\d{4}" 
             title="Please enter a valid phone number in the format (123) 456-7890"
-            minLength="14"
-            maxLength="14"
           />
           <ValidationError prefix="Phone" field="phone" errors={state.errors} />
         </div>
