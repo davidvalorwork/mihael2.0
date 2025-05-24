@@ -31,14 +31,8 @@ export const Features = (props) => {
   return (
     <div id="features" className="text-center">
       <div className="container">
-        <ReactGoogleReviews
-          layout="carousel"
-          featurableId={featurableWidgetId}
-        />
-        <div className="row align-items-center mb-4">
-          <div className="col-12 text-center">
-            <h2 className="features-title">Features</h2>
-          </div>
+        <div className="section-title text-center">
+          <h2>Features</h2>
         </div>
         <div className="row justify-content-center">
           {props.data

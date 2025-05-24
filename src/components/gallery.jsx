@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./gallery.css";
 import "../styles/products/Gallery.css";
 
 export const Gallery = (props) => {

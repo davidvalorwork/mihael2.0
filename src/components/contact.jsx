@@ -1,42 +1,24 @@
-import { useState } from "react";
-import emailjs from "emailjs-com";
 import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
-const initialState = {
-  name: "",
-  email: "",
-  message: "",
-};
 export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setState((prevState) => ({ ...prevState, [name]: value }));
-  };
-  const clearState = () => setState({ ...initialState });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(name, email, message);
-
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        e.target,
-        "YOUR_PUBLIC_KEY"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          clearState();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+  const [state, handleSubmit] = useForm("xyzkjkkw");
+  if (state.succeeded) {
+    return (
+      <div id="contact">
+        <div className="container">
+          <div className="col-md-8">
+            <div className="row">
+              <div className="section-title">
+                <h2>Get a free quote</h2>
+                <p>Thank you for contacting us! We will get back to you as soon as possible.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div>
       <div id="contact">
@@ -50,54 +32,52 @@ export const Contact = (props) => {
                   get back to you as soon as possible.
                 </p>
               </div>
-              <form name="sentMessage" validate="true" onSubmit={handleSubmit}>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="form-control"
-                        placeholder="Name"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="form-control"
-                        placeholder="Email"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <textarea
-                    name="message"
-                    id="message"
-                    className="form-control"
-                    rows="4"
-                    placeholder="Message"
-                    required
-                    onChange={handleChange}
-                  ></textarea>
-                  <p className="help-block text-danger"></p>
-                </div>
-                <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
-                </button>
-              </form>
+              <form onSubmit={handleSubmit} className="row">
+  <div className="col-md-6">
+    <div className="form-group">
+      <input
+        type="text"
+        id="name"
+        name="name"
+        className="form-control"
+        placeholder="Name"
+        required
+      />
+      <ValidationError prefix="Name" field="name" errors={state.errors} />
+    </div>
+  </div>
+  <div className="col-md-6">
+    <div className="form-group">
+      <input
+        type="email"
+        id="email"
+        name="email"
+        className="form-control"
+        placeholder="Email"
+        required
+      />
+      <ValidationError prefix="Email" field="email" errors={state.errors} />
+    </div>
+  </div>
+  <div className="col-md-12">
+    <div className="form-group">
+      <textarea
+        name="message"
+        id="message"
+        className="form-control"
+        rows="4"
+        placeholder="Message"
+        required
+      ></textarea>
+      <ValidationError prefix="Message" field="message" errors={state.errors} />
+    </div>
+  </div>
+  <div className="col-md-12">
+    <button type="submit" className="btn btn-custom btn-lg" disabled={state.submitting}>
+      Send Message
+    </button>
+  </div>
+</form>
             </div>
           </div>
           <div className="col-md-3 col-md-offset-1 contact-info">
@@ -154,7 +134,7 @@ export const Contact = (props) => {
       </div>
       <div id="footer">
         <div className="container text-center">
-          <p>&copy; 2024 Cristal Clear Water Technology </p>
+          <p data-component-name="Contact" className="contact-copyright"> @ 2025 Cristal Clear Water Technology</p>
         </div>
       </div>
     </div>

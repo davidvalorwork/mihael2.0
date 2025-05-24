@@ -1,4 +1,5 @@
 import React from "react";
+import "./services.css";
 export const Services = (props) => {
   return (
     <div id="services" className="text-center">
@@ -16,8 +17,14 @@ export const Services = (props) => {
         <div className="row">
           {props.data
             ? props.data.map((d, i) => (
-              <div key={`${d.name}-${i}`} className="col-md-4">
-                {" "}
+              <div
+                key={`${d.name}-${i}`}
+                className="col-md-4 fade-in"
+                style={{
+                  '--delay': `${0.1 + i * 0.15}s`,
+                  animationDelay: `${0.1 + i * 0.15}s`,
+                }}
+              >
                 <i className={d.icon}></i>
                 <div className="service-desc">
                   <h3>{d.name}</h3>

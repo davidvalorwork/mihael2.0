@@ -1,5 +1,22 @@
 #testimonials .row {
-  align-items: flex-start !important;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 24px;
+  align-items: stretch;
+  justify-items: center;
+}
+
+@media (max-width: 600px) {
+  #testimonials .row {
+    grid-template-columns: 2fr;
+  }
+}
+
+#testimonials .testimonial-card {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 #testimonials .testimonial-card {
@@ -38,6 +55,45 @@
   padding: 0;
   text-align: center;
 }
+#testimonials .section-title {
+  position: relative;
+  margin-bottom: 2.5em;
+}
+#testimonials .section-title h2 {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 2.8em;
+  letter-spacing: 0.07em;
+  background: linear-gradient(90deg, #2193b0 10%, #6dd5ed 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 4px 16px rgba(33,147,176,0.07);
+  margin-bottom: 0.3em;
+  text-transform: uppercase;
+  display: inline-block;
+  animation: fadeInDown 1.2s cubic-bezier(.5,1.8,.5,1) both;
+}
+#testimonials .section-title::after {
+  content: "";
+  display: block;
+  margin: 0.6em auto 0 auto;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2193b0 10%, #6dd5ed 90%);
+  border-radius: 2px;
+  animation: fadeInLine 1.5s cubic-bezier(.5,1.8,.5,1) both;
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes fadeInLine {
+  0% { width: 0; opacity: 0; }
+  100% { width: 80px; opacity: 1; }
+}
+
 #testimonials .testimonial-card .testimonial-meta {
   font-size: 0.97em;
   color: #555;
