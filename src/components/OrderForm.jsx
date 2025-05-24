@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import styles from "./OrderForm.module.css";
 
 export const OrderForm = () => {
   const [state, handleSubmit] = useForm("xyzkjkkw");
@@ -8,9 +9,9 @@ export const OrderForm = () => {
   }
 
   return (
-    <div className="mx-auto p-4">
+    <div className={styles["order-form-wrapper"]}>
       <h2 className="text-2xl font-bold mb-4"></h2>
-      <form className="grid grid-cols-2 gap-4" onSubmit={handleSubmit}>
+      <form className={`grid grid-cols-2 gap-4 ${styles["order-form-scroll"]} ${styles["order-form-animate"]}`} onSubmit={handleSubmit}>
         <div className="grid grid-cols-2 gap-4">
         <div>
           <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
@@ -79,12 +80,10 @@ export const OrderForm = () => {
         <button 
           type="submit" 
           className="btn btn-custom btn-lg page-scroll col-span-2" 
-          style={{ background: "linear-gradient(to right, #5ca9fb 0%, #6372ff 10%)" }}
         >
           Submit
         </button>
         </div>
-        
       </form>
     </div>
   );

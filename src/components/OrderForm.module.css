@@ -1,0 +1,73 @@
+.order-form-wrapper {
+  font-family: 'Roboto', 'Poppins', 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(120deg, #e3f3fa 70%, #b5eaff 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(33,147,176,0.13);
+  padding: 36px 24px 24px 24px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.order-form-scroll {
+  max-height: 340px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #2193b0 #e3f3fa;
+  padding-right: 8px;
+}
+
+.order-form-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.order-form-scroll::-webkit-scrollbar-thumb {
+  background: #2193b0;
+  border-radius: 6px;
+}
+.order-form-scroll::-webkit-scrollbar-track {
+  background: #e3f3fa;
+  border-radius: 6px;
+}
+
+@keyframes slideFadeIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: none; }
+}
+
+.order-form-animate {
+  animation: slideFadeIn 0.8s cubic-bezier(.5,1.8,.5,1);
+}
+
+.order-form-wrapper h2,
+.order-form-wrapper label {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.09em;
+  color: #2193b0;
+  letter-spacing: 0.03em;
+}
+
+.order-form-wrapper input,
+.order-form-wrapper textarea {
+  font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+  background: #fafdff;
+  color: #1a355e;
+}
+
+.order-form-wrapper button {
+  background: linear-gradient(90deg, #5ca9fb 0%, #6dd5ed 100%);
+  color: #fff;
+  font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(108,213,237,0.09);
+}
+.order-form-wrapper button:hover {
+  background: linear-gradient(90deg, #2193b0 0%, #5ca9fb 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(33,147,176,0.18);
+}
