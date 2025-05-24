@@ -10,6 +10,15 @@ export const Navigation = (props) => {
     height: "60px", // Ajusta el tamaño según tus necesidades
   };
 
+  // Gradient link style
+  const gradientLinkStyle = {
+    background: "linear-gradient(90deg, #2193b0 10%, #6dd5ed 90%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    color: "transparent"
+  };
+
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -26,24 +35,26 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
           </button>
-          <a
-            className="navbar-brand page-scroll flex"
-            href="#page-top"
-            style={brandStyle}
-          >
-            <img
-              src="img/logo.jpeg" // Reemplaza con la ruta a tu logo
-              alt="Logo"
-              style={logoStyle} // Aplica el estilo del logo
-            />
-
-          </a>{ }
-          <a  href="#page-top">
-            <img
-              src="img/onlyText.png"
-              style={{ width: "160px", marginTop: "13px", marginLeft: "-10px"}}
-            />
-          </a>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <a
+              className="navbar-brand page-scroll flex"
+              href="#page-top"
+              style={brandStyle}
+            >
+              <img
+                src="img/logo.jpeg"
+                alt="Logo"
+                style={logoStyle}
+              />
+            </a>
+            <a href="#page-top" style={{ marginLeft: "10px" }}>
+              <img
+                src="img/onlyText.png"
+                style={{ width: "100px", marginTop: "8px" }}
+                alt="Text Logo"
+              />
+            </a>
+          </div>
 
         </div>
 
@@ -53,37 +64,22 @@ export const Navigation = (props) => {
         >
           <ul className="nav navbar-nav navbar-right">
             <li>
-              <a href="#features" className="page-scroll">
+              <a href="#features" className="page-scroll nav-link-gradient" style={gradientLinkStyle}>
                 Features
               </a>
             </li>
             <li>
-              <a href="#about" className="page-scroll">
+              <a href="#about" className="page-scroll nav-link-gradient" style={gradientLinkStyle}>
                 About
               </a>
             </li>
             <li>
-              <a href="#services" className="page-scroll">
+              <a href="#services" className="page-scroll nav-link-gradient" style={gradientLinkStyle}>
                 Services
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="page-scroll">
-                Our Products
-              </a>
-            </li>
-            <li>
-              <a href="#testimonials" className="page-scroll">
-                Testimonials
-              </a>
-            </li>
-            {/* <li>
-              <a href="#team" className="page-scroll">
-                Team
-              </a>
-            </li> */}
-            <li>
-              <a href="#contact" className="page-scroll">
+              <a href="#contact" className="page-scroll nav-link-gradient" style={gradientLinkStyle}>
                 Contact
               </a>
             </li>
