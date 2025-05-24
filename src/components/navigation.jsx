@@ -38,14 +38,19 @@ export const Navigation = (props) => {
           <div style={{ display: "flex", alignItems: "center" }}>
             <a
               className="navbar-brand page-scroll flex"
-              href="#page-top"
+              href="/"
               style={brandStyle}
+              itemScope
+              itemType="https://schema.org/Organization"
+              rel="home"
             >
-              <img
-                src="img/logo.jpeg"
-                alt="Logo"
-                style={logoStyle}
-              />
+              <span itemProp="logo">
+                <img
+                  src="img/logo.jpeg"
+                  alt="Cristal Clear Water Technology company logo"
+                  style={logoStyle}
+                />
+              </span>
             </a>
             <a href="#page-top" style={{ marginLeft: "10px" }}>
               <img
