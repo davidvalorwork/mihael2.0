@@ -42,56 +42,108 @@ export const Gallery = (props) => {
                       }`}
                     >
                       {d.title !== "Reverse Osmosis" && (
-                        <div className="img-container">
-                          {d.imgUrls
-                            ? d.imgUrls.map((url, index) => (
-                                <div key={index} className="row">
-                                  <img
-                                    src={url}
-                                    alt={`${d.title} ${index + 1}`}
-                                    width="400"
-                                    height="200"
-                                  />
-                                  {d.texts && <p>{d.texts[index]}</p>}
-                                </div>
-                              ))
-                            : d.imgUrl && (
-                                <img
-                                  src={d.imgUrl}
-                                  alt={d.title}
-                                  width="400"
-                                  height="200"
-                                />
-                              )}
-                        </div>
-                      )}
+  <div className="img-container">
+    {d.imgUrls
+      ? d.imgUrls.map((url, index) => (
+          <div key={index} className="row">
+            <a href={`/product/${d.title.toLowerCase().replace(/\s+/g, '-')}`}
+               style={{display: 'block'}}>
+              <img
+                src={url}
+                alt={`${d.title} ${index + 1}`}
+                width="400"
+                height="200"
+                style={{cursor: 'pointer'}}
+              />
+            </a>
+            {d.texts && d.texts[index]
+  ? <p>{d.texts[index]}</p>
+  : (index === 2 && (
+      <a href={`/product/${d.title.toLowerCase().replace(/\s+/g, '-')}`}
+         style={{ textDecoration: 'none' }}>
+        <button style={{
+          padding: '8px 20px',
+          background: 'linear-gradient(90deg, #2193b0 10%, #6dd5ed 90%)',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '8px',
+          fontWeight: 'bold',
+          cursor: 'pointer',
+          marginTop: '10px'
+        }}>
+          See Details
+        </button>
+      </a>
+    ))}
+          </div>
+        ))
+      : d.imgUrl && (
+          <a href={`/product/${d.title.toLowerCase().replace(/\s+/g, '-')}`}
+             style={{display: 'block'}}>
+            <img
+              src={d.imgUrl}
+              alt={d.title}
+              width="400"
+              height="200"
+              style={{cursor: 'pointer'}}
+            />
+          </a>
+        )}
+  </div>
+)}
                       <div className="text-container">
                         <p>{d.description}</p>
                       </div>
                       {d.title === "Reverse Osmosis" && (
-                        <div className="img-container">
-                          {d.imgUrls
-                            ? d.imgUrls.map((url, index) => (
-                                <div key={index} className="row">
-                                  <img
-                                    src={url}
-                                    alt={`${d.title} ${index + 1}`}
-                                    width="400"
-                                    height="200"
-                                  />
-                                  {d.texts && <p>{d.texts[index]}</p>}
-                                </div>
-                              ))
-                            : d.imgUrl && (
-                                <img
-                                  src={d.imgUrl}
-                                  alt={d.title}
-                                  width="400"
-                                  height="200"
-                                />
-                              )}
-                        </div>
-                      )}
+  <div className="img-container">
+    {d.imgUrls
+      ? d.imgUrls.map((url, index) => (
+          <div key={index} className="row">
+            <a href={`/product/${d.title.toLowerCase().replace(/\s+/g, '-')}`}
+               style={{display: 'block'}}>
+              <img
+                src={url}
+                alt={`${d.title} ${index + 1}`}
+                width="400"
+                height="200"
+                style={{cursor: 'pointer'}}
+              />
+            </a>
+            {d.texts && d.texts[index]
+  ? <p>{d.texts[index]}</p>
+  : (index === 2 && (
+      <a href={`/product/${d.title.toLowerCase().replace(/\s+/g, '-')}`}
+         style={{ textDecoration: 'none' }}>
+        <button style={{
+          padding: '8px 20px',
+          background: 'linear-gradient(90deg, #2193b0 10%, #6dd5ed 90%)',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '8px',
+          fontWeight: 'bold',
+          cursor: 'pointer',
+          marginTop: '10px'
+        }}>
+          See Details
+        </button>
+      </a>
+    ))}
+          </div>
+        ))
+      : d.imgUrl && (
+          <a href={`/product/${d.title.toLowerCase().replace(/\s+/g, '-')}`}
+             style={{display: 'block'}}>
+            <img
+              src={d.imgUrl}
+              alt={d.title}
+              width="400"
+              height="200"
+              style={{cursor: 'pointer'}}
+            />
+          </a>
+        )}
+  </div>
+)}
                       <div className="text-container">
                         <ul>
                           {d.features.map((feature, index) => (
