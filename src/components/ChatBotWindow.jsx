@@ -73,7 +73,7 @@ const answerStyle = {
 const questions = [
   {
     q: "What services do you offer?",
-    a: "We offer a range of services including web development, design, and digital marketing. Contact us for more details!",
+    a: "We install advanced reverse osmosis water filtration systems for homes and businesses, ensuring the highest quality drinking water by removing contaminants and impurities. Enjoy pure, great-tasting water with our professional installation service.",
   },
   {
     q: "How can I contact support?",
