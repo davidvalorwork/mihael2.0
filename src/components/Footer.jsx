@@ -5,7 +5,6 @@ const footerStyle = {
   color: "#fff",
   padding: "24px 0 12px 0",
   textAlign: "center",
-  marginTop: 40,
   fontSize: 16,
 };
 
@@ -14,7 +13,7 @@ export const Footer = () => (
     <div>
       &copy; {new Date().getFullYear()} Cristal Clear Water Technology. All rights reserved.
     </div>
-    <div style={{ fontSize: 13, marginTop: 4 }}>
+    <div style={{ fontSize: 13}}>
       Designed by davidvalorwork@gmail.com
     </div>
   </footer>

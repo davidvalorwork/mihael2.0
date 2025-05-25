@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import Footer from "./Footer";
 
 export const Contact = (props) => {
   const [state, handleSubmit] = useForm("xyzkjkkw");
@@ -11,7 +12,10 @@ export const Contact = (props) => {
             <div className="row">
               <div className="section-title">
                 <h2>Get a free quote</h2>
-                <p>Thank you for contacting us! We will get back to you as soon as possible.</p>
+                <p>
+                  Thank you for contacting us! We will get back to you as soon
+                  as possible.
+                </p>
               </div>
             </div>
           </div>
@@ -43,7 +47,11 @@ export const Contact = (props) => {
                       placeholder="Name"
                       required
                     />
-                    <ValidationError prefix="Name" field="name" errors={state.errors} />
+                    <ValidationError
+                      prefix="Name"
+                      field="name"
+                      errors={state.errors}
+                    />
                   </div>
                 </div>
                 <div className="col-md-6">
@@ -56,7 +64,11 @@ export const Contact = (props) => {
                       placeholder="Email"
                       required
                     />
-                    <ValidationError prefix="Email" field="email" errors={state.errors} />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      errors={state.errors}
+                    />
                   </div>
                 </div>
                 <div className="col-md-12">
@@ -69,11 +81,19 @@ export const Contact = (props) => {
                       placeholder="Message"
                       required
                     ></textarea>
-                    <ValidationError prefix="Message" field="message" errors={state.errors} />
+                    <ValidationError
+                      prefix="Message"
+                      field="message"
+                      errors={state.errors}
+                    />
                   </div>
                 </div>
                 <div className="col-md-12">
-                  <button type="submit" className="btn btn-custom btn-lg" disabled={state.submitting}>
+                  <button
+                    type="submit"
+                    className="btn btn-custom btn-lg"
+                    disabled={state.submitting}
+                  >
                     Send Message
                   </button>
                 </div>
@@ -132,11 +152,7 @@ export const Contact = (props) => {
           </div>
         </div>
       </div>
-      <div id="footer">
-        <div className="container text-center">
-          <p data-component-name="Contact" className="contact-copyright"> @ 2025 Cristal Clear Water Technology</p>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 };
