@@ -55,7 +55,12 @@ export const Header = (props) => {
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">
-            <span className="close" onClick={handleCloseModal} style={{color: "black", paddingRight: "10px"}}>
+            <span className="close" onClick={handleCloseModal} style={{
+              color: 'black',
+              paddingRight: "10px",
+              position: "absolute",
+              right: "0"
+            }}>
               &times;
             </span>
             <OrderForm />

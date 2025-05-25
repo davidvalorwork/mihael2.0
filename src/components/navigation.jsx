@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import "./navigation.css";
+import { getActiveSection } from "./navigationActive";
 
 export const Navigation = (props) => {
+  const sectionIds = ["features", "about", "services", "contact"];
+  const [activeSection, setActiveSection] = useState(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const current = getActiveSection(sectionIds, 90);
+      setActiveSection(current);
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const brandStyle = {
-    fontSize: "14px", // Ajusta el tamaño según tus necesidades
+    fontSize: "14px",
     padding: "0px"
   };
 
   const logoStyle = {
-    height: "60px", // Ajusta el tamaño según tus necesidades
+    height: "60px",
   };
 
   // Gradient link style
@@ -20,71 +35,60 @@ export const Navigation = (props) => {
   };
 
   return (
-    <nav id="menu" className="navbar navbar-default navbar-fixed-top">
-      <div className="container">
-        <div className="navbar-header">
-          <button
-            type="button"
-            className="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
-          >
-            {" "}
-            <span className="sr-only">Toggle navigation</span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-          </button>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <a
-              className="navbar-brand page-scroll flex"
-              href="/"
-              style={brandStyle}
-              itemScope
-              itemType="https://schema.org/Organization"
-              rel="home"
-            >
-              <span itemProp="logo">
-                <img
-                  src="img/logo.jpeg"
-                  alt="Cristal Clear Water Technology company logo"
-                  style={logoStyle}
-                />
-              </span>
-            </a>
-            <a href="#page-top" style={{ marginLeft: "10px" }}>
-              <img
-                src="img/onlyText.png"
-                style={{ width: "100px", marginTop: "8px" }}
-                alt="Text Logo"
-              />
-            </a>
-          </div>
-
-        </div>
-
-        <div
-          className="collapse navbar-collapse"
-          id="bs-example-navbar-collapse-1"
+    <nav id="menu" className="navbar navbar-expand-md bg-white shadow-sm">
+      <div className="container-fluid px-4">
+        <a
+          className="navbar-brand p-0 me-2 d-flex align-items-center"
+          href="/"
+          itemScope
+          itemType="https://schema.org/Organization"
+          rel="home"
         >
-          <ul className="nav navbar-nav navbar-right">
-            <li>
-              <a href="#features" className="page-scroll nav-link-gradient" style={gradientLinkStyle}>
+          <span itemProp="logo">
+            <img
+              src={"/img/logo.jpeg"}
+              alt="Cristal Clear Water Technology company logo"
+              style={{height: "60px"}}
+            />
+          </span>
+          <span className="ms-2">
+            <img
+              src={"/img/onlyText.png"}
+              alt="Text Logo"
+              style={{width: "160px", marginTop: "12px"}}
+            />
+          </span>
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-navbar"
+          aria-controls="main-navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="main-navbar">
+          <ul className="navbar-nav ms-auto mb-2 mb-md-0">
+            <li className="nav-item">
+              <a href="#features" className={`nav-link${activeSection === "features" ? " active" : ""}`}>
                 Features
               </a>
             </li>
-            <li>
-              <a href="#about" className="page-scroll nav-link-gradient" style={gradientLinkStyle}>
+            <li className="nav-item">
+              <a href="#about" className={`nav-link${activeSection === "about" ? " active" : ""}`}>
                 About
               </a>
             </li>
-            <li>
-              <a href="#services" className="page-scroll nav-link-gradient" style={gradientLinkStyle}>
+            <li className="nav-item">
+              <a href="#services" className={`nav-link${activeSection === "services" ? " active" : ""}`}>
                 Services
               </a>
             </li>
-            <li>
-              <a href="#contact" className="page-scroll nav-link-gradient" style={gradientLinkStyle}>
+            <li className="nav-item">
+              <a href="#contact" className={`nav-link${activeSection === "contact" ? " active" : ""}`}>
                 Contact
               </a>
             </li>

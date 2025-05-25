@@ -69,9 +69,14 @@ hr {
   border: 0;
 }
 /* Navigation */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
 #menu {
   padding: 15px;
   transition: all 0.8s;
+  margin: 0 !important;
 }
 #menu.navbar-default {
   background-color: #fff;

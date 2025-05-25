@@ -1,0 +1,90 @@
+.navbar-nav .nav-link {
+  position: relative;
+  font-size: 1.5rem;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #2193b0 10%, #6dd5ed 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  transition: color 0.2s;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link:first-child {
+  margin-left: 25px;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2193b0 10%, #6dd5ed 90%);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  z-index: 1;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+  transform: scaleX(1);
+}
+
+/* Remove underline by default */
+
+.navbar {
+  box-shadow: none !important;
+  border-bottom: none;
+  position: sticky !important;
+  top: 0;
+  z-index: 1030;
+}
+
+/* Thin black line at the very top */
+.navbar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #111;
+  z-index: 10;
+}
+
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2193b0 10%, #6dd5ed 90%);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  z-index: 1;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+  color: #5cc6e0;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after,
+.navbar-nav .nav-link.active::after {
+  transform: scaleX(1);
+}
