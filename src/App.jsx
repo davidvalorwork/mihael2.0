@@ -6,6 +6,8 @@ import { About } from "./components/about";
 import { Services } from "./components/services";
 import { Gallery } from "./components/gallery";
 import { Testimonials } from "./components/testimonials";
+import ChatBotIcon from "./components/ChatBotIcon";
+import ChatBotWindow from "./components/ChatBotWindow";
 
 import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
@@ -19,9 +21,20 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
+  const [chatOpen, setChatOpen] = useState(false);
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
+
+  // Animation: disable scroll when chat is open (optional UX)
+  useEffect(() => {
+    if (chatOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [chatOpen]);
 
   return (
     <div>
@@ -33,6 +46,8 @@ const App = () => {
       <Gallery data={landingPageData.Gallery} />
       <Testimonials data={landingPageData.Testimonials} />
       <Contact data={landingPageData.Contact} />
+      {chatOpen && <ChatBotWindow onClose={() => setChatOpen(false)} />}
+      <ChatBotIcon onClick={() => setChatOpen(v => !v)} />
     </div>
   );
 };
