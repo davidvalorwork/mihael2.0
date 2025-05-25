@@ -101,8 +101,15 @@ export default function ChatBotWindow({ onClose }) {
     setTimeout(() => setAnimated(true), 10);
   }, []);
 
+  // Hide the window until animation starts
+  const mergedWindowStyle = {
+    ...windowStyle,
+    visibility: animated ? 'visible' : 'hidden',
+    pointerEvents: animated ? 'auto' : 'none',
+  };
+
   return (
-    <div style={windowStyle} className={animated ? 'chatbot-animated' : ''}>
+    <div style={mergedWindowStyle} className={animated ? 'chatbot-animated' : ''}>
       <button style={closeBtnStyle} onClick={onClose} aria-label="Close chat">×</button>
       <h3 style={{marginTop: 0, marginBottom: 12, color: '#2563eb'}}>Ask a Question</h3>
       {selected === null ? (
@@ -111,7 +118,13 @@ export default function ChatBotWindow({ onClose }) {
             <button
               key={idx}
               style={optionBtnStyle}
-              onClick={() => setSelected(idx)}
+              onClick={() => {
+                setAnimated(false);
+                setTimeout(() => {
+                  setSelected(idx);
+                  setAnimated(true);
+                }, 10);
+              }}
             >
               {item.q}
             </button>
@@ -120,7 +133,13 @@ export default function ChatBotWindow({ onClose }) {
       ) : (
         <div>
           <div style={answerStyle}>{questions[selected].a}</div>
-          <button style={{...optionBtnStyle, background:'#dbeafe', color:'#2563eb'}} onClick={() => setSelected(null)}>
+          <button style={{...optionBtnStyle, background:'#dbeafe', color:'#2563eb'}} onClick={() => {
+            setAnimated(false);
+            setTimeout(() => {
+              setSelected(null);
+              setAnimated(true);
+            }, 10);
+          }}>
             Ask another question
           </button>
         </div>

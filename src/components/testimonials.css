@@ -1,17 +1,3 @@
-#testimonials .row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px 24px;
-  align-items: stretch;
-  justify-items: center;
-}
-
-@media (max-width: 600px) {
-  #testimonials .row {
-    grid-template-columns: 2fr;
-  }
-}
-
 #testimonials .testimonial-card {
   width: 100%;
   max-width: 340px;
@@ -31,8 +17,6 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.25s, box-shadow 0.25s;
-  min-height: unset !important;
-  height: 140px !important;
 }
 #testimonials .testimonial-card:hover {
   transform: scale(1.04) translateY(-4px);

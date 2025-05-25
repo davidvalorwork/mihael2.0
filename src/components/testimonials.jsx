@@ -5,6 +5,9 @@ import "./testimonials.css";
 const featurableWidgetId = "2fbf9657-7a81-4404-9bfd-b7529e621c01";
 
 export const Testimonials = (props) => {
+  if (!props.data) return "loading";
+  const data = [...props.data];
+  console.log(data)
   return (
     <div id="testimonials">
       <div className="container">
@@ -16,22 +19,19 @@ export const Testimonials = (props) => {
           featurableId={featurableWidgetId}
         />
         <div className="row">
-          {props.data
-            ? [...props.data].map((d, i) => (
-                <div key={`${d.name}-${i}`}> 
-                  <div className="testimonial-card">
-                    <div className="testimonial-image">
-                      {" "}
-                      <img src={d.img} alt="" />{" "}
-                    </div>
-                    <div className="testimonial-content">
-                      <p>{d.text}</p>
-                      <div className="testimonial-meta"> - {d.name} </div>
-                    </div>
-                  </div>
+          {data.map((d, i) => (
+            <div key={`${d.name}-${i}`} className="col-xs-6 col-sm-4 col-md-2">
+              <div className="testimonial-card">
+                <div className="testimonial-image">
+                  <img src={d.img} alt="" />
                 </div>
-              ))
-            : "loading"}
+                <div className="testimonial-content">
+                  <p>{d.text}</p>
+                  <div className="testimonial-meta"> - {d.name}</div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
