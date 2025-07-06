@@ -6,9 +6,10 @@ import { Footer } from "./Footer";
 import styles from "./ProductDetail.module.css";
 
 const slugToTitle = {
-  crystalblue: "CrystalBlue",
-  crystalpro: "CrystalPro",
-  crystalbasic: "CrystalBasic",
+  "crystal-blue": "Crystal Blue",
+  "crystal-max-pro": "Crystal Max Pro",
+  "crystal-max": "Crystal Max",
+  "crystal-blue-pro": "Crystal Blue Pro",
   "reverse-osmosis": "Reverse Osmosis",
 };
 
@@ -65,7 +66,12 @@ export const ProductDetail = () => {
             </div>
           ) : null}
         </div>
-        <p className="fs-5">{product.description}</p>
+        <p className="fs-5">
+          {(product.title === "Crystal Blue Pro" || product.title === "Crystal Blue") && (
+            <i className="fa fa-wifi me-2" style={{ color: '#007bff' }} aria-hidden="true"></i>
+          )}
+          {product.description}
+        </p>
         {product.features && product.features.length > 0 && (
           <ul className="list-group list-group-flush mb-3">
             {product.features.map((f, i) => f && <li key={i} className="list-group-item">{f}</li>)}

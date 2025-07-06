@@ -20,4 +20,8 @@
     <loc>https://www.crystalclearwatertech.com/product/reverse-osmosis</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.crystalclearwatertech.com/product/crystal-blue-pro</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>

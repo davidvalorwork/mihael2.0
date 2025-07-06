@@ -1,6 +1,6 @@
 {
   "Header": {
-    "title": "Crystal Clear Water Technology LLC",
+    "title": "CrystalClear Water Technology LLC",
     "paragraph": ""
   },
   "About": {
@@ -40,7 +40,6 @@
       "text": "We install advanced reverse osmosis water filtration systems for homes and businesses, ensuring the highest quality drinking water by removing contaminants and impurities. Enjoy pure, great-tasting water with our professional installation service."
     }
   ],
-
   "Gallery": [
     {
       "title": "Reverse Osmosis",
@@ -50,7 +49,13 @@
         "img/products/IntielliClear1000.png"
       ],
       "description": "Tankless Reverse Osmosis Water Filtration System consists of a spiral flow RO Filter, a 3-in-1 PAC Composite Filter and a Post Carbon Filter; It boasts a superior filtration performance of removing heavy metals (e.g. lead), harmful substances, dissolved solids, chlorine and other common contaminants from tap water, at a filtering precision of 0.0001μm (micron); The Coconut Carbon Block in the Post Carbon Filter is sourced from coconut shells, providing a natural way to filter your water and improve the taste.",
-      "features": ["", "", "", "", ""],
+      "features": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
       "texts": [
         "• 600 GPD Tankless RO System. • Made of High Quality Certified & Listed Parts and Components",
         "• 800 GPD Tankless RO System. • RO Digital Smart Faucet. • Made of High Quality Certified & Listed Parts and Components",
@@ -58,22 +63,13 @@
       ]
     },
     {
-      "title": "CrystalBlue",
-      "imgUrl": "img/products/HydroBlue-Tank-Shroud.png",
-      "description": "Whole house filter system multi-stage water purification system. It minimizes the levels of minerals that lead to hard water and purifies the water equipped  with bluetooth controls for easy management on your phone",
-      "features": ["", "", "", ""]
-    },
-    {
-      "title": "CrystalPro",
-      "imgUrl": "img/products/aqs-plaine-series.png",
-      "description": "upscale multi-stage water purification system for the whole house, By eliminating silt, which creates turbidity in pure water, it filters the water by minimizing the minerals The only water system that is operational during a boil water alert this twin tank are available to supply water 24/7.",
-      "features": ["", "", "", "", ""]
-    },
-    {
-      "title": "CrystalBasic",
+      "title": "Crystal Max",
       "imgUrl": "img/products/HydroSpring-2023.png",
       "description": "Whole house filter system multi-stage water purification system you can produce clean, high-quality water while reducing the taste and smell of chlorine, which is frequently present in residential settings.",
-      "features": ["", ""],
+      "features": [
+        "",
+        ""
+      ],
       "advantages": [
         "Softer Smoother Skin and Hair",
         "Cleaner Longer Lasting Clothes",
@@ -83,9 +79,43 @@
         "Protect Water Using Appliances",
         "Saves Energy"
       ]
+    },
+    {
+      "title": "Crystal Blue",
+      "imgUrl": "img/products/HydroBlue-Tank-Shroud.png",
+      "description": "Whole house filter system multi-stage water purification system. It minimizes the levels of minerals that lead to hard water and purifies the water equipped  with bluetooth controls for easy management on your phone",
+      "features": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "title": "Crystal Max Pro",
+      "imgUrl": "img/products/aqs-plaine-series.png",
+      "description": "Upscale multi-stage water purification system for the whole house, By eliminating silt, which creates turbidity in pure water, it filters the water by minimizing the minerals The only water system that is operational during a boil water alert this twin tank are available to supply water 24/7.",
+      "features": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "title": "Crystal Blue Pro",
+      "imgUrl": "img/products/HydroBlue-Tank-Shroud.png",
+      "description": "Bluetooth Upscale multi-stage water purification system for the whole house, By eliminating silt, which creates turbidity in pure water, it filters the water by minimizing the minerals The only water system that is operational during a boil water alert this twin tank are available to supply water 24/7.",
+      "features": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
     }
   ],
-
   "Testimonials": [
     {
       "img": "img/testimonials/04.jpg",
@@ -109,7 +139,7 @@
     },
     {
       "img": "img/testimonials/06.jpg",
-      "text": "\"Fantastic service! The installation was done quickly and without any hassle. Our water is now crystal clear and tastes great.\"",
+      "text": "\"Fantastic service! The installation was done quickly and without any hassle. Our water is now crystalclear and tastes great.\"",
       "name": "Sarah Davis"
     },
     {
